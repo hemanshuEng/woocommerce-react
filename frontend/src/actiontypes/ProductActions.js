@@ -8,21 +8,7 @@ export const LIST_PRODUCTS_SUCCESS = 'LIST_PRODUCTS_SUCCESS';
 export const LIST_PRODUCTS_ERROR = 'LIST_PRODUCTS_ERROR';
 
 axios.defaults.baseURL = 'http://localhost/wp-json/wc/v3';
-const oauth = OAuth({
-    consumer: { key:process.env.REACT_APP_CONSUMER_KEY , secret:process.env.REACT_APP_CONSUMER_SECRET },
-    signature_method: process.env.REACT_APP_SIGNATURE_METHOD,
-    hash_function(base_string, key) {
-        return crypto
-            .createHmac('sha1', key)
-            .update(base_string)
-            .digest('base64')
-    },
-})
-const request = {
-    url: 'http://localhost/wp-json/wc/v3/products',
-    method: 'GET',
-};
-let header =  oauth.authorize(request);
+
  const productsListRequest = () =>{
     return {
         type: LIST_PRODUCTS_REQUEST,
@@ -46,6 +32,21 @@ let header =  oauth.authorize(request);
 export const products = () =>{
     return (dispatch) => {
         dispatch(productsListRequest())
+        let oauth = OAuth({
+            consumer: { key:process.env.REACT_APP_CONSUMER_KEY , secret:process.env.REACT_APP_CONSUMER_SECRET },
+            signature_method: process.env.REACT_APP_SIGNATURE_METHOD,
+            hash_function(base_string, key) {
+                return crypto
+                    .createHmac('sha1', key)
+                    .update(base_string)
+                    .digest('base64')
+            },
+        })
+        const request = {
+            url: 'http://localhost/wp-json/wc/v3/products',
+            method: 'GET',
+        };
+        let header =  oauth.authorize(request);
         axios.get('/products',{
             headers: oauth.toHeader(header)
             })
@@ -53,7 +54,8 @@ export const products = () =>{
                 const products = response.data;
                 dispatch(productsListSuccess(products))
         }
-        )
-        .catch(error => productsListError(error.response.data))
+        ).catch(error => {
+            dispatch(productsListError(error.response.data))
+        })
     }
 }

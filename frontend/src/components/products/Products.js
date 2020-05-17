@@ -6,7 +6,7 @@ function Products(props) {
     return (
         <div>
             <p>Hello World</p>
-            <button onClick={props.products}>products</button>
+            <button onClick={()=>props.products()}>products</button>
         </div>
     );
 }

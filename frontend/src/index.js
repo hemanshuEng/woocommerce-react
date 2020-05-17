@@ -4,7 +4,7 @@ import rootReducer from './reducers';
 import ReactDOM from 'react-dom';
 import thunk from "redux-thunk";
 import { composeWithDevTools } from "redux-devtools-extension";
-import './index.css';
+import './main.scss';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 import {Provider} from "react-redux";
