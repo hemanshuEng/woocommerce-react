@@ -1,15 +1,27 @@
-import React from 'react';
 import { connect } from 'react-redux';
 import { products } from '../../actions'
-function Products(props) {
-
-    return (
-        <div>
-            <p>Hello World</p>
-            <button onClick={()=>props.products()}>products</button>
-        </div>
-    );
+import ProductCard from "../ProductCard/ProductCard";
+import React, {Component} from 'react';
+import './Prodcuts.scss';
+class Products extends Component {
+    constructor(props) {
+        super(props);
+    }
+    componentDidMount() {
+        this.props.products();
+    }
+    render() {
+        const ProductItems = this.props.product.map((item)=> {
+            return <ProductCard key = {item.id}  item = {item} />
+        });
+        return (
+            <div className="ProductContainer">
+                {this.props.loading ? <h1>Loading</h1>: ProductItems}
+            </div>
+        );
+    }
 }
+
 const mapStateToProps = state => {
     return {
         loading: state.Products.loading,

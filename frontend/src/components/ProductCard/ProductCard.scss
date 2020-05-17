@@ -1,0 +1,27 @@
+.ProductCard {
+    width:259px;
+    &__img {
+      margin-top:10px;
+      height:310px;
+      width:259px;
+      box-shadow: 2px 5px 10px #00000029;
+      border-radius: 16px;
+    }
+
+    &__title {
+      margin-top: 15px;
+      text-align: center;
+      font: Bold 1.5rem Roboto;
+      color: #000000;
+      opacity: 1;
+    }
+
+    &__price {
+      margin-top:10px;
+      text-align: center;
+      font: Bold 1.5rem Roboto;
+      letter-spacing: 0px;
+      color: #E7AB3C;
+      opacity: 1;
+    }
+}
