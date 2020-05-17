@@ -8,7 +8,7 @@ class Products extends Component {
         super(props);
     }
     componentDidMount() {
-        this.props.products();
+        this.props.products(20);
     }
     render() {
         const ProductItems = this.props.product.map((item)=> {
@@ -31,7 +31,7 @@ const mapStateToProps = state => {
 }
 const mapDispatchToProps = dispatch => {
     return {
-        products: () => dispatch(products())
+        products: () => dispatch(products(20))
     }
 }
 export default connect(mapStateToProps,mapDispatchToProps)(Products);

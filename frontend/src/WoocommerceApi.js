@@ -22,13 +22,16 @@ class WoocommerceApi {
         });
     }
 
-    get(endpoint) {
+    get(endpoint,param) {
         const method = 'GET';
         return this.request.get(endpoint,{
             headers: this._getOauth().toHeader(this._getOauth().authorize({
-                url:process.env.REACT_APP_BASE_URL + endpoint,
-                method: method
-            }))
+                url:process.env.REACT_APP_BASE_URL + endpoint + `?per_page=${param}`,
+                method: method,
+            },)),
+            params:{
+                per_page:param
+            }
         })
     }
 }

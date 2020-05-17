@@ -26,10 +26,10 @@ const woocommerce = new WoocommerceApi();
     }
 }
 
-export const products = () =>{
+export const products = (param) =>{
     return (dispatch) => {
         dispatch(productsListRequest())
-        woocommerce.get('/products')
+        woocommerce.get('/products',param)
         .then(response => {
                 const products = response.data;
                 dispatch(productsListSuccess(products))
