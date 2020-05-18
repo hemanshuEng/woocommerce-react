@@ -10,6 +10,12 @@ docker-stop:
     docker-compose stop && \
     Echo "stopping Wordpress site"
 
+react-install:
+	cd frontend && \
+	Echo "change directory frontend" && \
+	npm install && \
+	Echo "installing package"
+
 react-start:
 	cd frontend && \
 	Echo "change directory frontend" && \
