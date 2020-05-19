@@ -2,7 +2,7 @@
 
 ### Design for website   
 [Adobe XD file for design](https://github.com/hemanshuEng/ecommerce-site-design)  
-
+[Site Design](https://xd.adobe.com/view/d29820f6-bdd4-4c1b-6462-6c8b849380f5-a4a9/)
 ### Woocommerce api setup 
 wordpress site is dockerized and folder is WordpressTheme so download docker on machine  
 To Run make command in window download [Gnuwin32](http://gnuwin32.sourceforge.net/packages/make.htm) 
