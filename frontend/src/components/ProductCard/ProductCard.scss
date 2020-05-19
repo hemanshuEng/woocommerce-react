@@ -1,27 +1,29 @@
+@import './../../scss/utils/variables';
 .ProductCard {
-    width:259px;
+    width: 259px;
     &__img {
-      margin-top:10px;
-      height:310px;
-      width:259px;
+      margin-top: 1rem;
+      height: 310px;
+      width: 259px;
       box-shadow: 2px 5px 10px #00000029;
       border-radius: 16px;
     }
 
     &__title {
-      margin-top: 15px;
+      font-family: $secondary-font;
+      font-size: 1.5rem;
+      font-weight: Bold;
+      margin-top: 1.5rem;
       text-align: center;
-      font: Bold 1.5rem Roboto;
-      color: #000000;
+      color: $secondary-color;
       opacity: 1;
     }
 
     &__price {
-      margin-top:10px;
+      margin-top: 1rem;
       text-align: center;
-      font: Bold 1.5rem Roboto;
-      letter-spacing: 0px;
-      color: #E7AB3C;
+      font: Bold 1.5rem $secondary-font;
+      color: $primary-color;
       opacity: 1;
     }
 }

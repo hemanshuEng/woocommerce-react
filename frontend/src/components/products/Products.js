@@ -4,9 +4,6 @@ import ProductCard from "../ProductCard/ProductCard";
 import React, {Component} from 'react';
 import './Prodcuts.scss';
 class Products extends Component {
-    constructor(props) {
-        super(props);
-    }
     componentDidMount() {
         this.props.products(20);
     }

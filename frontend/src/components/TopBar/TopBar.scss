@@ -1,0 +1,33 @@
+@import './../../main';
+.topbar {
+  font-family: $primary-font;
+  &__container {
+    display: flex;
+    flex-wrap: wrap;
+
+  }
+  &__one {
+    width:30%;
+    padding: 2rem 0.5rem 2rem 0.5rem ;
+    font-size:1.5rem;
+    display:flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: flex-end;
+    border: 1px solid #707070;
+    &-img{
+      padding-right: 1.5rem;
+    }
+    &-email{
+      padding-right: 1.5rem;
+    }
+  }
+  &__two {
+    width:40%;
+    border: 1px solid #707070;
+  }
+  &__three {
+    width: 30%;
+    border: 1px solid #707070;
+  }
+}
