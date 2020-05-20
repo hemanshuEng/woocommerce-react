@@ -1,6 +1,8 @@
 @import './../../scss/utils/variables';
 .ProductContainer{
+  flex-basis: 0;
+  flex-grow: 999;
   display:flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: space-around;
 }
