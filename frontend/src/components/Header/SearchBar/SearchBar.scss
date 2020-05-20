@@ -49,6 +49,9 @@
         align-items: center;
         width: 10%;
         margin-left: 40px;
+        &-heart, &-cartIcon {
+            padding: 1rem;
+        }
         &-price{
             font-size: 2rem;
             font-family: $primary-font;

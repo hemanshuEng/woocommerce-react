@@ -1,9 +1,9 @@
 import React from 'react';
-import Mail from './../../img/mail.svg';
-import Phone from './../../img/phone.svg';
-import Facebook from './../../img/facebook.svg';
-import Twitter from './../../img/twitter.svg';
-import Instagram from './../../img/instagram.svg';
+import Mail from '../../../img/mail.svg';
+import Phone from '../../../img/phone.svg';
+import Facebook from '../../../img/facebook.svg';
+import Twitter from '../../../img/twitter.svg';
+import Instagram from '../../../img/instagram.svg';
 import './TopBar.scss';
 function TopBar(props) {
     return (

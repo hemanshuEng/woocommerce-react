@@ -1,0 +1,26 @@
+@import './../../../main';
+.navbar {
+  background-color: $secondary-color;
+  text-transform: uppercase;
+  font-size: 1.5rem;
+  font-family: $primary-font;
+
+  &__menu {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    &-item{
+      padding:2rem 5rem;
+      border-width: 0 1px 0 1px;
+      border-style: solid;
+      border-color: azure;
+    }
+    & > a{
+      color: white;
+      text-decoration: none;
+    }
+    & > a:hover {
+      background-color: $primary-color;
+    }
+  }
+}
